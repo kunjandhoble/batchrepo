@@ -34,7 +34,7 @@ for func in powerList:
 
 attack = {'quick': (lambda x: "Quick Attack") , 'power': (lambda x: "Power Attack"),'miss': (lambda x: "The Attack Missed")}
 
-print(attack['quick']())
+print(attack['quick']('str'))
 
 # You could get a random dictionary as well for say our
 # previous warrior objects
@@ -44,7 +44,7 @@ import random
 # choice() picks a random value from that list
 attackKey = random.choice(list(attack.keys()))
 
-attack[attackKey]()
+attack[attackKey](0)
 
 # ---------- PROBLEM ----------
 # Create a random list filled with the characters H and T
@@ -109,7 +109,7 @@ print(list(filter((lambda x: x % 9 == 0), randList)))
 # Reduce receives a list and returns a single result
 
 # You must import reduce
-from functools import reduce
+# from functools import reduce
 
 # Add up the values in a list
 print(reduce((lambda x, y: x + y), range(1, 6)))
